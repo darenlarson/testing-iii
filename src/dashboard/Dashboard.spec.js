@@ -44,4 +44,13 @@ describe('</Dashboard />', () => {
         expect(icon).toHaveTextContent(/unlocked/i);
         expect(icon).toHaveClass('green-led');
     });
+    it('shows the controls and display', () => {
+        const { getByTestId } = render(<Dashboard />);
+
+        const display = getByTestId('display');
+        const controls = getByTestId('controls');
+
+        expect(display).toBeInTheDocument();
+        expect(controls).toBeInTheDocument();
+    });
 });
