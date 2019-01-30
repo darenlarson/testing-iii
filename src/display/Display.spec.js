@@ -20,14 +20,14 @@ describe('<Display />', () => {
         it('should have the background color red when closed is equal to true', () => {
             const { getByTestId } = render(<Display closed={true} />);
 
-            const button = getByTestId('open-closed-btn');
+            const button = getByTestId('open-closed-icon');
 
             expect(button).toHaveClass('red-led');
         });
         it('should have the background color green when closed is equal false', () => {
             const { getByTestId } = render(<Display closed={false} />);
 
-            const button = getByTestId('open-closed-btn');
+            const button = getByTestId('open-closed-icon');
 
             expect(button).toHaveClass('green-led');
         })
@@ -47,14 +47,14 @@ describe('<Display />', () => {
         it('should have the background color red when locked is equal to true', () => {
             const { getByTestId } = render(<Display locked={true} />);
 
-            const button = getByTestId('locked-unlocked-btn');
+            const button = getByTestId('locked-unlocked-icon');
 
             expect(button).toHaveClass('red-led');
         });
         it('should have the background color green when closed is equal false', () => {
             const { getByTestId } = render(<Display locked={false} />);
 
-            const button = getByTestId('locked-unlocked-btn');
+            const button = getByTestId('locked-unlocked-icon');
 
             expect(button).toHaveClass('green-led');
         })
