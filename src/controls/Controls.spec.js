@@ -35,4 +35,17 @@ describe('<Controls />', () => {
             expect(button).not.toHaveAttribute('disabled');
         });
     });
+
+    describe('Close Gate/Open Gate button', () => {
+        it('renders Close Gate when closed is equal to false', () => {
+            const { getByText } = render(<Controls closed={false} />);
+
+            getByText(/close gate/i);
+        });
+        it('renders Open Gate when close is equal to true', () => {
+            const { getByText } = render(<Controls closed={true} />);
+
+            getByText(/open gate/i);
+        });
+    });
 });
